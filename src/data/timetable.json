@@ -2,7 +2,7 @@
   "days": [
     "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
   ],
-  "slots": [
+  "saturday": [
     { "time": "08:25 AM TO 09:00 AM", "subjects": {
         "XII": { "subject": "ENG", "teacher": "AK" },
         "XI": { "subject": "ACC/PHY", "teacher": "JSS/BSN" },
@@ -43,7 +43,8 @@
         "VI": { "subject": "HINDI", "teacher": "MG" }
       }
     },
-    { "time": "10:45 AM TO 11:20 AM", "subjects": {
+    { "time": "10:45 AM TO 11:05 AM", "break": "MILK BREAK" },
+    { "time": "11:05 AM TO 11:40 AM", "subjects": {
         "XII": { "subject": "CHEM", "teacher": "PSK" },
         "XI": { "subject": "ENG", "teacher": "AK" },
         "X": { "subject": "SCIENCE", "teacher": "BSN" },
@@ -53,59 +54,51 @@
         "VI": { "subject": "SST", "teacher": "PK" }
       }
     },
-    { "time": "02:00 PM TO 04:00 PM", "remedial": "REMEDIAL CLASSES/PREP", "teacher": "Class Teacher" }
-  ],
-  "friday": [
-    { "time": "08:25 AM TO 09:00 AM", "subjects": {
-        "XII": { "subject": "ENG", "teacher": "AK" },
-        "XI": { "subject": "ACC/PHY", "teacher": "JSS/BSN" },
-        "X": { "subject": "MATHS/ECO", "teacher": "PD/PR" },
-        "IX": { "subject": "COM/BIO", "teacher": "AG/RBW" },
-        "VIII": { "subject": "ENG", "teacher": "IR" },
-        "VII": { "subject": "COMP", "teacher": "SR" },
-        "VI": { "subject": "MATHS", "teacher": "SRW" }
-      }
-    },
-    { "time": "09:00 AM TO 09:35 AM", "subjects": {
-        "XII": { "subject": "ENG", "teacher": "AK" },
-        "XI": { "subject": "ACC/PHY", "teacher": "JSS/BSN" },
-        "X": { "subject": "MATHS/ECO", "teacher": "PD/PR" },
-        "IX": { "subject": "COM/CHEM", "teacher": "AG/PSK" },
-        "VIII": { "subject": "ENG", "teacher": "IR" },
-        "VII": { "subject": "GEO", "teacher": "PK" },
-        "VI": { "subject": "MATHS", "teacher": "SRW" }
-      }
-    },
-    { "time": "09:35 AM TO 10:10 AM", "subjects": {
-        "XII": { "subject": "MATHS", "teacher": "RM" },
-        "XI": { "subject": "BIO/CHEM", "teacher": "RBW/PSK" },
-        "X": { "subject": "SST", "teacher": "PK" },
-        "IX": { "subject": "ENG", "teacher": "IR" },
-        "VIII": { "subject": "SCIENCE", "teacher": "BSN" },
-        "VII": { "subject": "HINDI", "teacher": "MG" },
-        "VI": { "subject": "ENG", "teacher": "AK" }
-      }
-    },
-    { "time": "10:10 AM TO 10:45 AM", "subjects": {
-        "XII": { "subject": "PHY/ACC", "teacher": "BSN/JSS" },
+    { "time": "11:40 AM TO 12:15 PM", "subjects": {
+        "XII": { "subject": "PHY", "teacher": "BSN" },
         "XI": { "subject": "MATHS", "teacher": "PD" },
-        "X": { "subject": "HINDI", "teacher": "MG" },
-        "IX": { "subject": "BIO/CHEM", "teacher": "RBW/PSK" },
-        "VIII": { "subject": "SST", "teacher": "PK" },
+        "X": { "subject": "COMP", "teacher": "AG" },
+        "IX": { "subject": "SST", "teacher": "PK" },
+        "VIII": { "subject": "SCIENCE", "teacher": "BSN" },
+        "VII": { "subject": "COMP", "teacher": "SR" },
+        "VI": { "subject": "SCIENCE", "teacher": "BSN" }
+      }
+    },
+    { "time": "12:15 PM TO 12:50 PM", "subjects": {
+        "XII": { "subject": "BIO", "teacher": "RBW" },
+        "XI": { "subject": "CHEM", "teacher": "PSK" },
+        "X": { "subject": "MATHS", "teacher": "PD" },
+        "IX": { "subject": "HINDI", "teacher": "MG" },
+        "VIII": { "subject": "ENG", "teacher": "IR" },
         "VII": { "subject": "SCIENCE", "teacher": "BSN" },
+        "VI": { "subject": "COMP", "teacher": "SR" }
+      }
+    },
+    { "time": "12:50 PM TO 01:25 PM", "subjects": {
+        "XII": { "subject": "ENG", "teacher": "AK" },
+        "XI": { "subject": "PHY", "teacher": "BSN" },
+        "X": { "subject": "SST", "teacher": "PK" },
+        "IX": { "subject": "BIO", "teacher": "RBW" },
+        "VIII": { "subject": "MATHS", "teacher": "PD" },
+        "VII": { "subject": "ENG", "teacher": "IR" },
         "VI": { "subject": "HINDI", "teacher": "MG" }
       }
     },
-    { "time": "10:45 AM TO 11:20 AM", "subjects": {
-        "XII": { "subject": "CHEM", "teacher": "PSK" },
-        "XI": { "subject": "ENG", "teacher": "AK" },
-        "X": { "subject": "SCIENCE", "teacher": "BSN" },
-        "IX": { "subject": "MATHS", "teacher": "PD" },
-        "VIII": { "subject": "HINDI", "teacher": "MG" },
-        "VII": { "subject": "ENG", "teacher": "IR" },
-        "VI": { "subject": "SST", "teacher": "PK" }
-      }
-    },
-    { "time": "02:00 PM TO 04:00 PM", "remedial": "REMEDIAL CLASSES/PREP", "teacher": "Class Teacher" }
+    { "time": "01:25 PM TO 02:00 PM", "break": "LUNCH BREAK" },
+    { "time": "02:00 PM TO 03:30 PM", "remedial": "REMEDIAL CLASSES/PREP", "teacher": "Class Teacher" },
+    { "time": "03:30 PM TO 03:45 PM", "break": "TEA SHARE" },
+{ "time": "03:45 PM TO 04:00 PM", "break": "CHANGE INTO GAMES KIT" },
+{ "time": "04:00 PM TO 05:30 PM", "break": "GAMES / PHONE CALL" },
+{ "time": "05:30 PM TO 06:15 PM", "break": "TUCK SHOP" },
+{ "time": "06:15 PM TO 07:00 PM", "break": "EVENING GURUDWARA" },
+{ "time": "07:00 PM TO 07:30 PM", "break": "DINNER" },
+{ "time": "07:30 PM TO 08:30 PM", "break": "NIGHT PREP" },
+{ "time": "08:30 PM TO 10:00 PM", "break": "RECREATION & REST" },
+{ "time": "10:00 PM TO 05:30 AM", "break": "LIGHT OUT" },
+{ "time": "05:30 AM TO 07:00 AM", "break": " RISING BELL, MORNING PT AND DRESS-UP" },
+{ "time": "07:00 AM TO 07:45 AM", "break": "MORNING GURUDWARA" },
+{ "time": "07:45 PM TO 08:15 AM", "break": "BREAKFAST" },
+{ "time": "08:15 AM TO 08:30 AM", "break": "MORNING ASSEMBLY" }
+
   ]
 }
