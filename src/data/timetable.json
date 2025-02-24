@@ -24,7 +24,7 @@
       }
     },
     { "time": "09:35 AM TO 10:10 AM", "subjects": {
-        "XII": { "subject": "MATHS", "teacher": "RM" },
+        "XII": { "subject": "MATHS", "teacher": "PS" },
         "XI": { "subject": "BIO/CHEM", "teacher": "RBW/PSK" },
         "X": { "subject": "SST", "teacher": "PK" },
         "IX": { "subject": "ENG", "teacher": "IR" },
@@ -44,7 +44,7 @@
       }
     },
     { "time": "10:45 AM TO 11:20 AM", "subjects": {
-        "XII": { "subject": "CHEM", "teacher": "PSK" },
+        "XII": { "subject": "CHEM", "teacher": "KK" },
         "XI": { "subject": "ENG", "teacher": "AK" },
         "X": { "subject": "SCIENCE", "teacher": "BSN" },
         "IX": { "subject": "MATHS", "teacher": "PD" },
