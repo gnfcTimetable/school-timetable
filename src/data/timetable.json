@@ -51,7 +51,17 @@
         "VIII": { "subject": "HINDI", "teacher": "RK" },
         "VII": { "subject": "ENG", "teacher": "IR" },
         "VI": { "subject": "SST", "teacher": "PK" }
+      },
+      { "time": "11:20 AM TO 11:55 AM", "subjects": {
+        "XII": { "subject": "MATHS/HINDI", "teacher": "PS/SS" },
+        "XI": { "subject": "COM/CHEM", "teacher": "AG/KK" },
+        "X": { "subject": "MATHS/ECO", "teacher": "PD/PS" },
+        "IX": { "subject": "ENG", "teacher": "IR" },
+        "VIII": { "subject": "DIV", "teacher": "HPS" },
+        "VII": { "subject": "HIN", "teacher": "RK" },
+        "VI": { "subject": "GEOG", "teacher": "PK" }
       }
+      
     },
     { "time": "02:00 PM TO 03:00 PM", "remedial": "REMEDIAL CLASSES/PREP", "teacher": "Class Teacher" }
   ],
