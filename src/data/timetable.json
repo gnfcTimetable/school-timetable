@@ -43,7 +43,7 @@
         "VI": { "subject": "HINDI", "teacher": "RK" }
       }
     },
-    { "time": "10:45 AM TO 11:20 AM", "subjects": {
+    { "time": "11:20 AM TO 11:55 AM", "subjects": {
         "XII": { "subject": "CHEM", "teacher": "KK" },
         "XI": { "subject": "ENG", "teacher": "AK" },
         "X": { "subject": "SCIENCE", "teacher": "BSN" },
