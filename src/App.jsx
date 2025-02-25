@@ -16,8 +16,16 @@ const App = () => {
 
   useEffect(() => {
     const today = new Date().toLocaleString("en-US", { weekday: "long" });
-    const slots = today === "Friday" ? timetableData.friday : timetableData.slots;
-    
+
+    // Fetch correct schedule for the day
+    const todaySchedule = timetableData.schedule[today];
+    let slots = todaySchedule?.classes ?? [];
+
+    // If commonRoutine is true, add common routine slots
+    if (todaySchedule?.commonRoutine) {
+      slots = [...slots, ...timetableData.commonRoutine];
+    }
+
     const now = new Date();
     let foundCurrent = null;
     let foundUpcoming = null;
@@ -31,14 +39,14 @@ const App = () => {
         if (period === "AM" && hours === 12) hours = 0;
         return new Date(now.getFullYear(), now.getMonth(), now.getDate(), hours, parseInt(minute, 10));
       });
-      
+
       if (now >= startTime && now <= endTime) {
         foundCurrent = slot;
       } else if (now < startTime && !foundUpcoming) {
         foundUpcoming = slot;
       }
     }
-    
+
     setCurrentSlot(foundCurrent);
     setUpcomingSlot(foundUpcoming);
   }, [currentTime]);
@@ -46,19 +54,26 @@ const App = () => {
   useEffect(() => {
     if (selectedTeacher) {
       const today = new Date().toLocaleString("en-US", { weekday: "long" });
-      const slots = today === "Friday" ? timetableData.friday : timetableData.slots;
+      const todaySchedule = timetableData.schedule[today];
+      let slots = todaySchedule?.classes ?? [];
+
+      if (todaySchedule?.commonRoutine) {
+        slots = [...slots, ...timetableData.commonRoutine];
+      }
+
       const schedule = [];
       
       slots.forEach(slot => {
         if (slot.subjects) {
           Object.entries(slot.subjects).forEach(([className, details]) => {
-            const teachers = details.teacher.split("/").map(t => t.trim());
+            const teachers = details.teacher?.split("/").map(t => t.trim()) ?? [];
             if (teachers.includes(selectedTeacher)) {
               schedule.push({ time: slot.time, className, subject: details.subject });
             }
           });
         }
       });
+
       setTeacherSchedule(schedule);
     } else {
       setTeacherSchedule([]);
@@ -75,6 +90,8 @@ const App = () => {
               <h2 style={{ color: "#007bff" }}>Ongoing Class ({currentSlot.time})</h2>
               {currentSlot.remedial ? (
                 <p><strong>{currentSlot.remedial}</strong> by <em>{currentSlot.teacher}</em></p>
+              ) : currentSlot.break ? (
+                <p><strong>{currentSlot.break}</strong></p>
               ) : (
                 <table style={{ width: "100%", borderCollapse: "collapse" }}>
                   <thead>
@@ -85,13 +102,14 @@ const App = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {Object.entries(currentSlot.subjects).map(([className, details]) => (
-                      <tr key={className}>
-                        <td style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>{className}</td>
-                        <td style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#5bc0de", fontWeight: "bold" }}>{details.subject}</td>
-                        <td style={{ padding: "10px", borderBottom: "1px solid #ddd", fontStyle: "italic", color: "#5a5a5a" }}>{details.teacher}</td>
-                      </tr>
-                    ))}
+                    {currentSlot.subjects &&
+                      Object.entries(currentSlot.subjects).map(([className, details]) => (
+                        <tr key={className}>
+                          <td style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>{className}</td>
+                          <td style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#5bc0de", fontWeight: "bold" }}>{details.subject}</td>
+                          <td style={{ padding: "10px", borderBottom: "1px solid #ddd", fontStyle: "italic", color: "#5a5a5a" }}>{details.teacher}</td>
+                        </tr>
+                      ))}
                   </tbody>
                 </table>
               )}
@@ -104,7 +122,12 @@ const App = () => {
           <h2 style={{ color: "#28a745" }}>Select Teacher</h2>
           <select onChange={(e) => setSelectedTeacher(e.target.value)} style={{ width: "100%", padding: "10px", marginBottom: "10px" }}>
             <option value="">-- Select Teacher --</option>
-            {Array.from(new Set(Object.values(timetableData.slots.flatMap(slot => Object.values(slot.subjects || {}).flatMap(subj => subj.teacher.split("/").map(t => t.trim())))))).map(teacher => (
+            {Array.from(new Set(
+              Object.values(timetableData.schedule)
+                .flatMap(day => day.classes.flatMap(slot => 
+                  Object.values(slot.subjects || {}).flatMap(subj => subj.teacher?.split("/").map(t => t.trim()) ?? [])
+                ))
+            )).map(teacher => (
               <option key={teacher} value={teacher}>{teacher}</option>
             ))}
           </select>
