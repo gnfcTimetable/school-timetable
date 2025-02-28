@@ -1,6 +1,6 @@
 {
   "commonRoutine": [
-    { "time": "01:25 PM TO 02:00 PM", "break": "LUNCH BREAK" },
+    { "time": "01:30 PM TO 02:00 PM", "break": "LUNCH BREAK" },
     { "time": "02:00 PM TO 03:30 PM", "remedial": "REMEDIAL CLASSES/PREP", "teacher": "Class Teacher" },
     { "time": "03:30 PM TO 03:45 PM", "break": "TEA SHARE" },
     { "time": "03:45 PM TO 04:00 PM", "break": "CHANGE INTO GAMES KIT" },
@@ -19,7 +19,7 @@
   "schedule": {
     "Monday": {
       "classes": [
-        { "time": "08:25 AM TO 09:00 AM", "subjects": {
+        { "time": "08:30 AM TO 09:05 AM", "subjects": {
             "XII": { "subject": "ENG", "teacher": "AK" },
             "XI": { "subject": "ACC/PHY", "teacher": "JSS/BSN" },
             "X": { "subject": "MATHS/ECO", "teacher": "PD/PR" },
@@ -29,7 +29,7 @@
             "VI": { "subject": "MATHS", "teacher": "SRW" }
           }
         },
-        { "time": "09:00 AM TO 09:35 AM", "subjects": {
+        { "time": "09:05 AM TO 09:40 AM", "subjects": {
             "XII": { "subject": "ENG", "teacher": "AK" },
             "XI": { "subject": "ACC/PHY", "teacher": "JSS/BSN" },
             "X": { "subject": "MATHS/ECO", "teacher": "PD/PR" },
@@ -39,7 +39,7 @@
             "VI": { "subject": "MATHS", "teacher": "SRW" }
           }
         },
-        { "time": "09:35 AM TO 10:10 AM", "subjects": {
+        { "time": "09:40 AM TO 10:15 AM", "subjects": {
             "XII": { "subject": "ACC/PHY", "teacher": "JSS/PS" },
             "XI": { "subject": "ECO/BIO", "teacher": "PR/RBW" },
             "X": { "subject": "GEOG", "teacher": "SRW" },
@@ -49,7 +49,7 @@
             "VI": { "subject": "PBI", "teacher": "JJ" }
           }
         },
-        { "time": "10:10 AM TO 10:45 AM", "subjects": {
+        { "time": "10:15 AM TO 10:50 AM", "subjects": {
             "XII": { "subject": "ECO/BIO", "teacher": "PR/RBW" },
             "XI": { "subject": "P/C/A", "teacher": "VR/AM/NT" },
             "X": { "subject": "P/C/A", "teacher": "RA/SR/NT" },
@@ -59,8 +59,8 @@
             "VI": { "subject": "ENG", "teacher": "SJK" }
           }
         },
-        { "time": "10:45 AM TO 11:05 AM", "break": "MILK BREAK" },
-        { "time": "11:05 AM TO 11:40 AM", "subjects": {
+        { "time": "10:50 AM TO 11:10 AM", "break": "MILK BREAK" },
+        { "time": "11:10 AM TO 11:45 AM", "subjects": {
             "XII": { "subject": "COM/CHEM", "teacher": "AG/KK" },
             "XI": { "subject": "ENG", "teacher": "AK" },
             "X": { "subject": "BIO/MUSIC", "teacher": "RBW/HS" },
@@ -70,7 +70,7 @@
             "VI": { "subject": "HIST", "teacher": "SJK" }
           }
         },
-        { "time": "11:40 AM TO 12:15 PM", "subjects": {
+        { "time": "11:45 AM TO 12:20 PM", "subjects": {
             "XII": { "subject": "COM/CHEM", "teacher": "AG/KK" },
             "XI": { "subject": "ENG", "teacher": "AK" },
             "X": { "subject": "HIST", "teacher": "SJK" },
@@ -80,7 +80,7 @@
             "VI": { "subject": "ART", "teacher": "NT" }
           }
         },
-        { "time": "12:15 PM TO 12:50 PM", "subjects": {
+        { "time": "12:20 PM TO 12:55 PM", "subjects": {
             "XII": { "subject": "MATHS", "teacher": "PS" },
             "XI": { "subject": "COM/CHEM", "teacher": "AG/KK" },
             "X": { "subject": "ENG", "teacher": "AK" },
@@ -89,7 +89,7 @@
             "VII": { "subject": "CHEM", "teacher": "PSK" },
             "VI": { "subject": "ENG", "teacher": "SJK" }
 } },
-        { "time": "12:50 PM TO 01:25 PM", "subjects": {
+        { "time": "12:55 PM TO 01:30 PM", "subjects": {
             "XII": { "subject": "MATHS/HINDI/PBI", "teacher": "PS/SS/HPS" },
             "XI": { "subject": "MATHS", "teacher": "PS" },
             "X": { "subject": "COM/CHEM", "teacher": "AG/PSK" },
